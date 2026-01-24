@@ -537,9 +537,9 @@ In case of input data being supplied to the question, it should be assumed to be
 We use itemgetter to enable multiple sort keys.
 
 Solutions:
-from operator import itemgetter, attrgetter
 
 ```python
+from operator import itemgetter, attrgetter
 l = []
 while True:
     s = input()
@@ -562,16 +562,19 @@ Consider use yield
 Solution:
 
 ```python
-def putNumbers(n):
-    i = 0
-    while i<n:
-        j=i
-        i=i+1
-        if j%7==0:
-            yield j
+class Numbers:
+    def __init__(self, n):
+        self.n = n
+    def putNumbers(self):
+        i = 0
+        while i<self.n:
+            j=i
+            i=i+1
+            if j%7==0:
+                yield j
 
-for i in reverse(100):
-    print(i)
+i = Numbers(100).putNumbers()
+print(list(i))
 ```
 
 ### Question 21
@@ -888,7 +891,7 @@ def printDict():
 		d[i]=i**2
 	print(d)
 
-printDict()
+print(Dict())
 ```
 
 ### Question 35
@@ -910,7 +913,7 @@ def printDict():
 	for (k,v) in d.items():	
 		print(v)
 
-printDict()
+print(Dict())
 ```
 
 ### Question 36
@@ -1080,11 +1083,11 @@ Use if statement to judge condition.
 
 Solution
 ```python
-s= raw_input()
+s = input()
 if s=="yes" or s=="YES" or s=="Yes":
-    print "Yes"
+    print("Yes")
 else:
-    print "No"
+    print("No")
 ```
 ### Question 45
 Write a program which can filter even numbers in a list by using filter function. The list is: [1,2,3,4,5,6,7,8,9,10].
@@ -1098,7 +1101,7 @@ Solution
 ```python
 li = [1,2,3,4,5,6,7,8,9,10]
 evenNumbers = filter(lambda x: x%2==0, li)
-print(evenNumbers)
+print(list(evenNumbers))
 ```
 
 ### Question 46
@@ -1112,7 +1115,7 @@ Solution
 ```python
 li = [1,2,3,4,5,6,7,8,9,10]
 squaredNumbers = map(lambda x: x**2, li)
-print(squaredNumbers)
+print(list(squaredNumbers))
 ```
 
 ### Question 47
@@ -1127,7 +1130,7 @@ Solution
 ```python
 li = [1,2,3,4,5,6,7,8,9,10]
 evenNumbers = map(lambda x: x**2, filter(lambda x: x%2==0, li))
-print(evenNumbers)
+print(list(evenNumbers))
 ```
 ### Question 48
 Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).

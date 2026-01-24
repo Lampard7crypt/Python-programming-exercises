@@ -139,6 +139,181 @@
 # print(lst)
 
 # ============================================================================================
-# Question 17
+# Question 18
 
+# import re
+# passwords, value = [x for x in input("Enter: ").split(', ')], list()
+# for password in passwords:
+#     if len(password)<6 or len(password)>12:
+#         continue
+#     else:
+#         pass
+#     if not re.search("[a-z]", password):
+#         continue
+#     elif not re.search("[A-Z]", password):
+#         continue
+#     elif not re.search("[0-9]", password):
+#         continue
+#     elif not re.search("[$#@]", password):
+#         continue
+#     elif not re.search("\s", password):
+#         continue
+#     else:
+#         pass
+#     value.append(password)
+    
+# print(", ".join(value))
+
+# ============================================================================================
+# Question 19
+
+# from operator import itemgetter
+# l = []
+# while True:
+#     s = input()
+#     if not s:
+#         break
+#     l.append(tuple(s.split(",")))
+
+# print(sorted(l, key=itemgetter(0,1,2)))
+
+# ============================================================================================
+# Question 20
+
+# class Numbers:
+#     def __init__(self, n):
+#         self.n = n
+#     def putNumbers(self):
+#         i = 0
+#         while i<self.n:
+#             j=i
+#             i=i+1
+#             if j%7==0:
+#                 yield j
+
+# i = Numbers(100).putNumbers()
+# print(list(i))
+
+# ============================================================================================
+# Question 21 <--- A real nice one frrr!!!
+
+# import math
+# origin = [0, 0]
+# for _ in range(4):
+#     line = input("").split(" ")
+#     if not line:
+#         break
+#     if line[0] == "LEFT":
+#         origin[0] -= int(line[1])
+#     elif line[0] == "RIGHT":
+#         origin[0] += int(line[1])
+#     if line[0] == "UP":
+#         origin[1] -= int(line[1])
+#     elif line[0] == "DOWN":
+#         origin[1] += int(line[1])
+#     else:
+#         pass
+
+# distance = round(math.sqrt((int(line[1]))**2 + (int(line[1]))**2))
+# print(distance)
+
+# ============================================================================================
+# Question 22
+
+# from collections import Counter
+# words = [x for x in input().split(' ')]
+# words.sort()
+# print(dict(Counter(words))) # can also usedefaultdict or get()
+
+# ============================================================================================
+# Question 23 Hell NO!!
+
+# ============================================================================================
+# Question 24
+
+# print(dict.get.__doc__) # Docstrings in the methods
+
+
+# ============================================================================================
+# Question 25
+
+# class Question:
+#     name = "Joe Goldberg" # Class param ie Question.name
+#     def __init__(self, name=None):
+#         self.name = name # instance param ie int.name
+#     def __str__(self):
+#         return "This is a class with name class var and instance var"
+    
+# person = Question("Tyler")
+# print(person)
+# print(person.name) # Tyler - instance var
+# print(Question.name) # Joe Goldberg - Class var
+
+# ============================================================================================
+# Question 26
+
+def sumoftwo(a: int, b: int)-> int:
+    return a + b
+
+# ============================================================================================
+# Question 27, 28, 29, 30, 31, 32 <---- Too easy
+# Question 34, 35, 36
+
+# squares = dict()
+# for i in range(0, 21):
+#     squares[i] = i**2
+    
+# print(squares, "\n", list(squares.values()), "\n", list(squares.keys()))
+
+# ============================================================================================
+# Question 41
+
+# lst = [(i, i**2) for i in range(1, 21)]
+# print(lst)
+
+# ============================================================================================
+# Question 42
+
+# mytup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+# print(mytup[:5], "\n", mytup[5:])
+
+# ============================================================================================
+# Question 44
+
+# boolean = input("Enter: ")
+# if boolean.lower() == "yes":
+#     print("Yes")
+# else:
+#     print("No")
+
+# ============================================================================================
+# Question 45
+
+# print(list(filter(lambda x: x%2==0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])))
+
+# ============================================================================================
+# Question 46
+
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10]
+# print(list(map(lambda x: x*x, lst)))
+
+# ============================================================================================
+# Question 47
+
+# sqe = map(lambda x: x*x, filter(lambda x: x%2==0, lst))
+# print(list(sqe))
+
+# ============================================================================================
+# Question 50
+
+class American:
+    def __init__(self):
+        pass
+    @staticmethod
+    def printNationality():
+        print("American")
+    
+    
+# ============================================================================================
+# Question 50
 
