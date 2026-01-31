@@ -309,11 +309,74 @@ lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10]
 class American:
     def __init__(self):
         pass
-    @staticmethod
+    @staticmethod # Methods in python not particular to classes or objects. 
     def printNationality():
         print("American")
     
+# ============================================================================================
+# Question 51
+
+class NewYorker(American):
+    def __init__(self):
+        super().__init__()
     
 # ============================================================================================
-# Question 50
+# Question 52
+
+import math
+class Circle:
+    def __init__(self, radius) -> None:
+        self.radius = radius
+    def calculateArea(self):
+        return round(math.pi * self.radius**2)
+    
+# ============================================================================================
+# Question 53
+
+class Rectangle:
+    def __init__(self, length, width) -> None:
+        self.length = length
+        self.width = width
+    def area(self):
+        return self.length * self.width
+    def perimeter(self):
+        return 2 * (self.length + self.width)
+    
+# ============================================================================================
+# Question 54
+
+class Shape:
+    def __init__(self) -> None:
+        pass
+    def area(self):
+        return 0
+    
+class Square(Shape):
+    def __init__(self, side) -> None:
+        self.side = side
+
+# ============================================================================================
+# Question 56
+
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("Division by zero")
+finally:
+    print("I am atomic")
+    
+# ============================================================================================
+# Question 57
+
+class MyError:
+    def __init__(self, msg) -> None:
+        self.msg = msg
+
+error = MyError("Something went wrong")
+
+# ============================================================================================
+# Question 58
+
+import re
+
 
