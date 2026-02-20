@@ -358,12 +358,12 @@ class Square(Shape):
 # ============================================================================================
 # Question 56
 
-try:
-    print(5/0)
-except ZeroDivisionError:
-    print("Division by zero")
-finally:
-    print("I am atomic")
+# try:
+#     print(5/0)
+# except ZeroDivisionError:
+#     print("Division by zero")
+# finally:
+#     print("I am atomic")
     
 # ============================================================================================
 # Question 57
@@ -379,4 +379,102 @@ error = MyError("Something went wrong")
 
 import re
 
+# email = "name@company.com"
+# pattern = r"(\w+)@(\w+)\.(com)"
+# name = re.match(pattern, email)
+# print(name.group(2))
 
+
+# ============================================================================================
+# Question 60
+
+# words = "2 4 5cats and 3 dogs"
+# pattern = (r"(\s\d+\s)|^(\d+)\s")
+# nums = re.findall(pattern, words)
+# print(list(nums))
+
+# ============================================================================================
+# Question 61
+
+# unicodeString = u"hello world!"
+# print(unicodeString)
+
+# ============================================================================================
+# Question 64
+# num = 0
+# for i in range(1, int(input("Enter: "))+1):
+#     num += i/(i+1)
+#     print(num)
+
+# ============================================================================================
+# Question 65-67
+
+# def myrecursivefunc(num):
+#     if num == 0: return 0
+#     elif num == 1: return 1
+#     return myrecursivefunc(num-1) + myrecursivefunc(num-2)
+# lst = [myrecursivefunc(i) for i in range(1, int(input("Enter: ")) + 1)]
+# print(lst)
+
+# ============================================================================================
+# Question 68
+
+# def mygen(n):
+#     for i in range(n+1):
+#         if i%2 == 0:
+#             yield i
+
+# print(", ".join([str(x) for x in mygen(int(input("Enter: ")))]))
+
+# ============================================================================================
+# Question 70
+
+li = [2,4,6,8]
+for i in li:
+    assert i%2==0 # No output, only gives assertion error when one is flase
+
+
+
+# ============================================================================================
+# Question 71
+
+# print(eval(input("Enter: ")))
+
+
+
+# ============================================================================================
+# Question 74, 75
+
+import random
+# print(random.random()*100)
+
+
+# ============================================================================================
+# Question 76
+
+# print(random.choice([i for i in range(1, 11) if i%2==0]))
+
+
+# ============================================================================================
+# Question 77
+
+# print(random.choice([i for i in range(201) if (i%5==0 and i%7==0)]))
+
+# ============================================================================================
+# Question 78, 79, 80
+
+# print(random.sample([i for i in range(1, 1001) if (i%5==0 and i%7==0)], 5))
+
+# ============================================================================================
+# Question 81
+
+# print(random.randrange(7, 16))
+
+# ============================================================================================
+# Question 82
+
+
+
+# ============================================================================================
+# Question 62, 63
+# Question 72, 73 binary search

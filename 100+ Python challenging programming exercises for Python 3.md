@@ -1476,7 +1476,7 @@ print(sum)
 Write a program to compute:
 
 f(n)=f(n-1)+100 when n>0
-and f(0)=1
+and f(0)=0
 
 with a given n input by console (n>0).
 
@@ -1777,7 +1777,7 @@ print(random.choice([i for i in range(11) if i%2==0]))
 ```
 
 ### Question 77
-Please write a program to output a random number, which is divisible by 5 and 7, between 0 and 10 inclusive using random module and list comprehension.
+Please write a program to output a random number, which is divisible by 5 and 7, between 0 and 200 inclusive using random module and list comprehension.
 
 Hints:
 Use random.choice() to a random element from a list.
@@ -1797,7 +1797,7 @@ Use random.sample() to generate a list of random values.
 Solution:
 ```python
 import random
-print(random.sample(range(100), 5))
+print(random.sample(range(100, 201), 5))
 ```
 
 ### Question 79
