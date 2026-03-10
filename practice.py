@@ -473,7 +473,11 @@ import random
 # ============================================================================================
 # Question 82
 
-
+import zlib
+s = b'hello world!hello world!hello world!hello world!'
+t = zlib.compress(s)
+print(t)
+print(zlib.decompress(t))
 
 # ============================================================================================
 # Question 62, 63
