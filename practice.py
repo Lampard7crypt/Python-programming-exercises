@@ -473,11 +473,21 @@ import random
 # ============================================================================================
 # Question 82
 
-import zlib
-s = b'hello world!hello world!hello world!hello world!'
-t = zlib.compress(s)
-print(t)
-print(zlib.decompress(t))
+# import zlib
+# s = b'hello world!hello world!hello world!hello world!'
+# t = zlib.compress(s)
+# print(t)
+# print(zlib.decompress(t))
+
+# ============================================================================================
+# Question 83
+
+from timeit import Timer
+t = Timer(
+    "for i in range(100): 1 + 1"
+)
+
+print(t.timeit())
 
 # ============================================================================================
 # Question 62, 63
