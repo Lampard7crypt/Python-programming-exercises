@@ -482,12 +482,20 @@ import random
 # ============================================================================================
 # Question 83
 
-from timeit import Timer
-t = Timer(
-    "for i in range(100): 1 + 1"
-)
+# from timeit import Timer
+# t = Timer(
+#     "for i in range(100): 1 + 1"
+# )
 
-print(t.timeit())
+# print(t.timeit())
+
+# ============================================================================================
+# Question 84
+from random import shuffle
+x = [3, 6, 7, 8]
+for i in range(4):
+    shuffle(x)
+    print(x)
 
 # ============================================================================================
 # Question 62, 63
