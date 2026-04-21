@@ -491,11 +491,55 @@ import random
 
 # ============================================================================================
 # Question 84
-from random import shuffle
-x = [3, 6, 7, 8]
-for i in range(4):
-    shuffle(x)
-    print(x)
+# from random import shuffle
+# x = [3, 6, 7, 8]
+# for i in range(4):
+#     shuffle(x)
+#     print(x)
+
+# ============================================================================================
+# Question 86
+
+# subjects = ['I', 'You']
+# verbs = ['play', 'love']
+# objects = ['Hockey', 'Football']
+# for i in range(2):
+#     for j in range(2):
+#         for k in range(2):
+#             print(f"{subjects[i]} {verbs[j]} {objects[k]}")
+
+# ============================================================================================
+# Question 88
+# lst = [12,24,35,70,88,120,155]
+# li = [i for i in lst if i%5==0 or i%7==0]
+# print(li)
+
+# ============================================================================================
+# Question 90
+# import numpy as np
+# myar = np.array([[0 for _ in range(5)] for i in range(8)])
+# print("Array:\n", myar)
+
+# ============================================================================================
+# Question 91
+# lst = [12,24,35,70,88,120,155]
+# print([x for (i, x) in enumerate(lst) if i not in [0, 4, 5]])
+
+# ============================================================================================
+
+from collections import Counter
+lst1 = [1,3,6,78,35,55]
+lst2 = [12,24,35,24,88,120,155]
+lst3 = []
+for i in lst1: lst2.append(i)
+counter = dict(Counter(lst2))
+for key in counter.keys():
+    if counter[key] > 1:
+        lst3.append(key)
+print(lst3)
+
+# ============================================================================================
+
 
 # ============================================================================================
 # Question 62, 63
